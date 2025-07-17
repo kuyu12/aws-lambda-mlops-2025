@@ -16,7 +16,7 @@ jobs:
       - name: install zip
         uses: montudor/action-zip@v1
       - name: Create zip file
-        run: cd src && zip -r code.zip
+        run: cd src && zip -r code.zip .
       - name: AWS LCI upload
         uses: imehedi/actions-awscli-v2@latest
         with:
