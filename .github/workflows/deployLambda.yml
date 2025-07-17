@@ -18,7 +18,7 @@ jobs:
       - name: Create zip file
         run: cd src && zip -r code.zip
       - name: AWS LCI upload
-        uses: imehedi/actions-awscliv2@latest
+        uses: imehedi/actions-awscli-v2@latest
         with:
           args: "lambda update-function-code --function-name arn:aws:lambda:us-east-1:204597968057:function:yair-cicd-exmple --zip-file fileb://src/code.zip"
         env:
